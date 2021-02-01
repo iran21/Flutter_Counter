@@ -23,10 +23,12 @@ class MyFormField extends StatelessWidget {
           padding: const EdgeInsets.all(5.0),
           child: Text(
             labelField,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white, fontSize: 12.0),
           ),
         ),
         TextFormField(
+          style: TextStyle(color: Colors.white, fontSize: 14),
+          cursorColor: Colors.white,
           obscureText: isObscured,
           onChanged: fieldCallBack,
           decoration: InputDecoration(
@@ -36,8 +38,6 @@ class MyFormField extends StatelessWidget {
             ),
             hintText: 'Enter your $labelField',
             hintStyle: TextStyle(color: Colors.white38),
-            // contentPadding: EdgeInsets.all(15.0),
-            labelStyle: TextStyle(color: Colors.white70),
             filled: true,
             fillColor: Color(0xff62a4ee),
             border: OutlineInputBorder(borderSide: BorderSide.none),

@@ -1,3 +1,4 @@
+import 'package:Counter/constantes.dart';
 import 'package:flutter/material.dart';
 
 class MyCheckBox extends StatefulWidget {
@@ -30,7 +31,7 @@ class _MyCheckBoxState extends State<MyCheckBox> {
             padding: const EdgeInsets.only(left: 8.0),
             child: Text(
               'Remember me',
-              style: TextStyle(color: Colors.white, fontSize: 12.0),
+              style: kTextStyle1,
             ),
           )
         ],

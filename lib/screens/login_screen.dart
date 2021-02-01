@@ -1,14 +1,18 @@
 import 'package:Counter/widgets/button_widget.dart';
 import 'package:Counter/widgets/checkbox_widget.dart';
 import 'package:Counter/widgets/formfield_widget.dart';
+import 'package:Counter/widgets/socialbutton_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../constantes.dart';
 
 class MyLoginScreen extends StatelessWidget {
   final bool isChecked = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff6fabf4),
+      resizeToAvoidBottomPadding: false,
+      backgroundColor: kPrimaryBlueColor,
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(
@@ -16,12 +20,7 @@ class MyLoginScreen extends StatelessWidget {
           children: [
             Text(
               'Sign In',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 25.0,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 1.0,
-              ),
+              style: kTextStyle1.copyWith(letterSpacing: 1.0, fontSize: 30.0),
             ),
             SizedBox(
               height: 40.0,
@@ -44,7 +43,7 @@ class MyLoginScreen extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   'Forgot Password?',
-                  style: TextStyle(color: Colors.white, fontSize: 12.0),
+                  style: kTextStyle1,
                 ),
               ),
             ),
@@ -54,37 +53,31 @@ class MyLoginScreen extends StatelessWidget {
             ),
             Text(
               '-OR-',
-              style: TextStyle(color: Colors.white, fontSize: 14.0),
+              style: kTextStyle1,
               textAlign: TextAlign.center,
+            ),
+            Text(
+              'Sign In with',
+              style: kTextStyle1,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SocialButton(),
-                SocialButton(),
+                MySocialButton(
+                  path: 'images/facebook.jpg',
+                ),
+                MySocialButton(path: 'images/google.png', size: 40.0),
               ],
+            ),
+            //REVIEW como alinhar dois containers: um no centro da tela e o outro no final dela?
+            FlatButton(
+              onPressed: () {},
+              child: Text(
+                'sign Up',
+                style: kTextStyle1,
+              ),
             )
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class SocialButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: CircleAvatar(
-        backgroundColor: Colors.white,
-        radius: 30.0,
-        child: IconButton(
-          icon: Icon(
-            Icons.face,
-            size: 45.0,
-          ),
-          onPressed: () {},
         ),
       ),
     );
