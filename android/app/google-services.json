@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1085663120158",
+    "project_id": "counter-6df30",
+    "storage_bucket": "counter-6df30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085663120158:android:5ce69fec3ae02cd0ea970f",
+        "android_client_info": {
+          "package_name": "com.example.Counter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085663120158-hvq9eagv2edm738sk5fccathg94qb0f1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzUdZbMzih9rYML-TFOPEbVauLGwTDTVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085663120158-hvq9eagv2edm738sk5fccathg94qb0f1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

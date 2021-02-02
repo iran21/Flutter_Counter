@@ -14,7 +14,7 @@ class MyLoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: kPrimaryBlueColor,
+      backgroundColor: kPrimaryVineColor,
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(

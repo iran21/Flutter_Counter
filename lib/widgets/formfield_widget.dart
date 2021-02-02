@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../constantes.dart';
+
 class MyFormField extends StatelessWidget {
   final String labelField;
   final IconData iconField;
@@ -43,7 +45,7 @@ class MyFormField extends StatelessWidget {
                   passconfirm ? 'Confirm Password' : 'Enter your $labelField',
               hintStyle: TextStyle(color: Colors.white38),
               filled: true,
-              fillColor: Color(0xff62a4ee),
+              fillColor: kLightVineColor,
               border: OutlineInputBorder(borderSide: BorderSide.none),
             ),
           ),

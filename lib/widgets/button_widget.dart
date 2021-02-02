@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../constantes.dart';
+
 class MyButton extends StatelessWidget {
   final String labelField;
   final Function onPressed;
@@ -24,7 +26,7 @@ class MyButton extends StatelessWidget {
           child: Text(
             labelField,
             style: TextStyle(
-                color: Color(0xff6fabf4),
+                color: kPrimaryVineColor,
                 fontSize: 17.0,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1.5),

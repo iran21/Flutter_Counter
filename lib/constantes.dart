@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 //colors
 const kPrimaryBlueColor = Color(0xff6fabf4);
+const kLightBlueColor = Color(0xff62a4ee);
+const kPrimaryVineColor = Color(0xff721121);
+const kLightVineColor = Color(0xffa31830);
 
 //decoration
 const kOutlinedDecoration = InputDecoration(
