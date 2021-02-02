@@ -1,5 +1,6 @@
 import 'package:Counter/screens/home_screen.dart';
 import 'package:Counter/screens/login_screen.dart';
+import 'package:Counter/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,11 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xff5885AF),
         backgroundColor: Color(0xffC3E0E5),
       ),
-      home: MyLoginScreen(),
+      initialRoute: MyLoginScreen.id,
+      routes: {
+        MyLoginScreen.id: (context) => MyLoginScreen(),
+        MySignupScreen.id: (context) => MySignupScreen()
+      },
     );
   }
 }

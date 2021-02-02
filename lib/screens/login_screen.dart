@@ -1,3 +1,4 @@
+import 'package:Counter/screens/signup_screen.dart';
 import 'package:Counter/widgets/button_widget.dart';
 import 'package:Counter/widgets/checkbox_widget.dart';
 import 'package:Counter/widgets/formfield_widget.dart';
@@ -7,11 +8,12 @@ import 'package:flutter/material.dart';
 import '../constantes.dart';
 
 class MyLoginScreen extends StatelessWidget {
+  static String id = 'MyLoginScreen';
   final bool isChecked = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       backgroundColor: kPrimaryBlueColor,
       body: Padding(
         padding: const EdgeInsets.all(30.0),
@@ -50,6 +52,7 @@ class MyLoginScreen extends StatelessWidget {
             MyCheckBox(),
             MyButton(
               labelField: 'LOGIN',
+              onPressed: () {},
             ),
             Text(
               '-OR-',
@@ -71,7 +74,9 @@ class MyLoginScreen extends StatelessWidget {
             ),
             //REVIEW como alinhar dois containers: um no centro da tela e o outro no final dela?
             FlatButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, MySignupScreen.id);
+              },
               child: Text(
                 'sign Up',
                 style: kTextStyle1,

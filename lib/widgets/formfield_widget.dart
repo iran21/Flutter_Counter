@@ -8,7 +8,7 @@ class MyFormField extends StatelessWidget {
   final bool isObscured;
 
   const MyFormField(
-      {this.labelField,
+      {@required this.labelField,
       this.iconField,
       this.hintTextField,
       this.fieldCallBack,
@@ -16,34 +16,39 @@ class MyFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Text(
-            labelField,
-            style: TextStyle(color: Colors.white, fontSize: 12.0),
-          ),
-        ),
-        TextFormField(
-          style: TextStyle(color: Colors.white, fontSize: 14),
-          cursorColor: Colors.white,
-          obscureText: isObscured,
-          onChanged: fieldCallBack,
-          decoration: InputDecoration(
-            prefixIcon: Icon(
-              iconField,
-              color: Colors.white,
+    bool passconfirm = (labelField == 'Confirm Password');
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Text(
+              labelField,
+              style: TextStyle(color: Colors.white, fontSize: 12.0),
             ),
-            hintText: 'Enter your $labelField',
-            hintStyle: TextStyle(color: Colors.white38),
-            filled: true,
-            fillColor: Color(0xff62a4ee),
-            border: OutlineInputBorder(borderSide: BorderSide.none),
           ),
-        ),
-      ],
+          TextFormField(
+            style: TextStyle(color: Colors.white, fontSize: 14),
+            cursorColor: Colors.white,
+            obscureText: isObscured,
+            onChanged: fieldCallBack,
+            decoration: InputDecoration(
+              prefixIcon: Icon(
+                iconField,
+                color: Colors.white,
+              ),
+              hintText:
+                  passconfirm ? 'Confirm Password' : 'Enter your $labelField',
+              hintStyle: TextStyle(color: Colors.white38),
+              filled: true,
+              fillColor: Color(0xff62a4ee),
+              border: OutlineInputBorder(borderSide: BorderSide.none),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

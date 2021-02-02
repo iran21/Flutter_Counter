@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
   final String labelField;
-  MyButton({this.labelField});
+  final Function onPressed;
+  MyButton({this.labelField, @required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +13,9 @@ class MyButton extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20.0),
         child: RaisedButton(
+          disabledColor: Colors.white54,
           color: Colors.white,
-          onPressed: () {},
+          onPressed: onPressed,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(20.0),
